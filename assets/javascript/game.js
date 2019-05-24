@@ -1,9 +1,10 @@
 // Arrays to store the different word that will be guessed. 
 
-var songs90s = ["Chattahoochee", "The Dance", "Dust On The Bottle", "It's Your Love", "Indian Outlaw", "Thinkin Problem", "Should've Been a Cowboy", "I Cross My Heart", "Don't Rock the Jukebox", "I'm In a Hurry", "Boot Scootin Boogie", "The Thunder Rolls", "Don't Take the Girl", "Carrying Your Love With Me", "Life's a Dance", "Angels Among Us", "This Kiss", ];
-var songs2000s = ["I Hope You Dance", "Chicken Fried", "Jesus Take the Wheel", "Love Story", "The House That Built Me", "Remember When", "Suds in the Bucket", "Mud on the Tires", "When I Get Where I'm Going", "You'll Think of Me", "Live Like You Were Dying", "Big Green Tractor", "What Hurts the Most", "Need You Now", "Beer for My Horses", "Life Is a Highway", "If You're Going Through Hell"];
-var artists90s = ["Brooks and Dunn", "Martina McBride", "Lonestar", "LeAnn Rimes", "Alan Jackson", "Garth Brooks", "Tim McGraw", "Faith Hill", "George Strait", "Shania Twain", "Dixie Chicks", "Reba McEntire", "Alabama", "Toby Keith", "Trisha Yearwood", "Deana Carter", "Trace Adkins", "Brad Paisley", "Dolly Parton", "Kenny Rogers", "Rodney Atkins"];
-var artists2000s = ["Taylor Swift", "Carrie Underwood", "Luke Bryan", "Jason Aldean", "Miranda Lambert", "Blake Shelton", "Rascal Flatts", "Keith Urban", "Dierks Bentley", "Big and Rich", "Sugarland", "Jake Owen", "Eric Church", "Lady Antebellum", "The Band Perry", "Zac Brown Band", "Little Big Town", "Josh Turner", "Kenny Chesney", "Ryan Shupe and the Rubberband"];
+// var songs90s = ["and"];
+var songs90s = ["chattahoochee", "thedance", "dustonthebottle", "itsyourlove", "indianoutlaw", "thinkinproblem", "shouldvebeenacowboy", "icrossmyheart", "dontrockthejukebox", "iminahurry", "bootscootinboogie", "thethunderrolls", "donttakethegirl", "carryingyourlovewithme", "lifesadance", "angelsamongus", "thiskiss", ];
+// var songs2000s = ["I Hope You Dance", "Chicken Fried", "Jesus Take the Wheel", "Love Story", "The House That Built Me", "Remember When", "Suds in the Bucket", "Mud on the Tires", "When I Get Where I'm Going", "You'll Think of Me", "Live Like You Were Dying", "Big Green Tractor", "What Hurts the Most", "Need You Now", "Beer for My Horses", "Life Is a Highway", "If You're Going Through Hell"];
+// var artists90s = ["Brooks and Dunn", "Martina McBride", "Lonestar", "LeAnn Rimes", "Alan Jackson", "Garth Brooks", "Tim McGraw", "Faith Hill", "George Strait", "Shania Twain", "Dixie Chicks", "Reba McEntire", "Alabama", "Toby Keith", "Trisha Yearwood", "Deana Carter", "Trace Adkins", "Brad Paisley", "Dolly Parton", "Kenny Rogers", "Rodney Atkins"];
+// var artists2000s = ["Taylor Swift", "Carrie Underwood", "Luke Bryan", "Jason Aldean", "Miranda Lambert", "Blake Shelton", "Rascal Flatts", "Keith Urban", "Dierks Bentley", "Big and Rich", "Sugarland", "Jake Owen", "Eric Church", "Lady Antebellum", "The Band Perry", "Zac Brown Band", "Little Big Town", "Josh Turner", "Kenny Chesney", "Ryan Shupe and the Rubberband"];
 
 //function that will select which array the user wants
 
@@ -14,20 +15,57 @@ var artists2000s = ["Taylor Swift", "Carrie Underwood", "Luke Bryan", "Jason Ald
 var randSongs90s = songs90s[Math.floor(Math.random() * songs90s.length)];
 console.log(randSongs90s);
 
-var randSongs2000s = songs2000s[Math.floor(Math.random() * songs2000s.length)];
-console.log(randSongs2000s);
+var underScore = randSongs90s.length;
+console.log(underScore);
+var rightLetter = [];
+var wrongLetter = [];
+// DOM Manipulation
 
-var randArtists90s = artists90s[Math.floor(Math.random() * artists90s.length)];
-console.log(randArtists90s);
+var underScoreDOM = Array(randSongs90s.length + 1).join(" _ ");
+document.getElementsByClassName('dashes');
+console.log(underScoreDOM);
 
-var randArtists2000s = artists2000s[Math.floor(Math.random() * artists2000s.length)];
-console.log(randArtists2000s);
+// var randSongs2000s = songs2000s[Math.floor(Math.random() * songs2000s.length)];
+// console.log(randSongs2000s);
+
+// var randArtists90s = artists90s[Math.floor(Math.random() * artists90s.length)];
+// console.log(randArtists90s);
+
+// var randArtists2000s = artists2000s[Math.floor(Math.random() * artists2000s.length)];
+// console.log(randArtists2000s);
 
 //create underscores based on length of string in array that is selected.
 
-//variable that will be used to store the object that was pulled from the array.
+// console.log(generateUnderScore());
 
-//blank array that the user will be prompted to enter a letter into each time limiting them to 7 attempts before they lose.
+//function that will log the users guesses.
+
+document.addEventListener('keypress', (event) => {
+    var keyLetter= String.fromCharCode(event.keyCode);
+    // console.log(keyLetter);
+//compare it to the word that was selected from the array
+    if(randSongs90s.indexOf(keyLetter) > -1) {
+    //if user guesses right then push it to the rightLetter array
+        rightLetter.push(keyLetter);
+        console.log(rightLetter);
+    //When the user guesses the letter right have a function that will replace the underscore
+        underScore[randSongs90s.indexOf(keyLetter)] = keyLetter;
+    //DOM Manipulation that puts the correct number of underscores based on what word is selected.
+        underScoreDOM[0].innerHTML = underScore.join(' ');
+        console.log(underScore);
+    if(underScore.join('') == randSongs90s) {
+        alert("Winner");
+    }
+}
+    //if user guesses wrong then push it to the wrongLetter array
+    else {
+        wrongLetter.push(keyLetter);
+        console.log(wrongLetter);   
+    }
+
+});
+//When the user guesses the letter right have a function that will replace the underscore
+// underScoreDOM.innerHTML = generateUnderScore().join('');
 
 //function that will count the number of attempts.
 
