@@ -38,4 +38,7 @@ body{
 #wLBox{
     border: 5px solid beige;
     height: 100px;
+    font-size: 120%;
+    color: beige;
+    font-family: "comic Sans MS", cursive, sans-serif;
 }

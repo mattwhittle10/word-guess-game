@@ -48,9 +48,21 @@ document.addEventListener('keypress', (event) => {
        {
            wrongLetter.push(keyLetter);
            console.log(wrongLetter);
-       }
+           //write the wrong letters guessed inside id "wLBox"
+           document.getElementById("wLBox").innerHTML = wrongLetter;
+            for(var i = 0; i <wrongLetter.length; i++) {
+                console.log(wrongLetter.length[i]);
+                if(wrongLetter.length == 7) {
+                    alert("You Lose");
+                }
+                else if(wrongLetter.length == 6) {
+                    alert("Last guess make it count!");
+                }
+            }
+        
+       }  
    }
-
+   //write the number of dashes to the id "dashes"
    document.getElementById("dashes").innerHTML = underScoreDOM;
 
 });
@@ -66,3 +78,4 @@ function checkWin()
        clearInterval(bContinue);
    }
 }
+
