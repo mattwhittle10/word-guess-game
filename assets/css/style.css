@@ -1,0 +1,41 @@
+#dashes{
+    color:beige;
+    position: absolute;
+    top: 75%; 
+    left: 20%;
+    padding: 2%;
+    font-size: 220%;
+    letter-spacing: 15px; 
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+body{
+    background-image: url(../images/heart-rituals.jpg);
+    background-size: 100%;
+}
+
+#keyPress{
+    color: beige;
+    padding-left: 13%;
+    padding-top: 1.5%;
+    padding-bottom: 1.5%;
+    font-size: 120%
+}
+
+#chalkboard{
+    padding-left: 14%;
+}
+
+#wrongLetter{
+    color: beige;
+    padding-top: 1.5%;
+    padding-left: 12%;
+    font-size: 150%;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#wLBox{
+    border: 5px solid beige;
+    height: 100px;
+}
