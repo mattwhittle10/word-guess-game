@@ -15,15 +15,14 @@ var songs90s = ["chattahoochee", "thedance", "dustonthebottle", "itsyourlove", "
 var randSongs90s = songs90s[Math.floor(Math.random() * songs90s.length)];
 console.log(randSongs90s);
 
-var underScore = randSongs90s.length;
+var underScore = [];
 console.log(underScore);
 var rightLetter = [];
 var wrongLetter = [];
 // DOM Manipulation
-
 var underScoreDOM = Array(randSongs90s.length + 1).join(" _ ");
-document.getElementsByClassName('dashes');
-console.log(underScoreDOM);
+document.getElementById("dashes").innerHTML = underScoreDOM;
+
 
 // var randSongs2000s = songs2000s[Math.floor(Math.random() * songs2000s.length)];
 // console.log(randSongs2000s);
@@ -52,7 +51,7 @@ document.addEventListener('keypress', (event) => {
         underScore[randSongs90s.indexOf(keyLetter)] = keyLetter;
     //DOM Manipulation that puts the correct number of underscores based on what word is selected.
         underScoreDOM[0].innerHTML = underScore.join(' ');
-        console.log(underScore);
+        console.log(underScoreDOM);
     if(underScore.join('') == randSongs90s) {
         alert("Winner");
     }
