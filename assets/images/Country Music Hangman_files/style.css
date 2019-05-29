@@ -1,51 +1,19 @@
 #dashes{
     color:beige;
     position: absolute;
-    top: 70%; 
-    left: 5%;
+    top: 75%; 
+    left: 20%;
     padding: 2%;
     font-size: 220%;
     letter-spacing: 15px; 
     font-family: "comic Sans MS", cursive, sans-serif;
 }
+
 body{
     background-image: url(../images/heart-rituals.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
-@media (max-width: 990px){
-    body{
-    background-image: url(../images/heart-rituals.jpg);
-    background-size: 100% 160%;
-    background-repeat: no-repeat;
-}
-}
-
-@media (max-width: 770px){
-    body{
-    background-image: url(../images/heart-rituals.jpg);
-    background-size: 100% 145%;
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-}
-
-@media (max-width: 990px){
- #dashes{
-     font-size: 130%;
- }
- img{
-     width: 100%;
- }
-}
-
-@media (max-width: 770px){
-    #dashes{
-        font-size: 65%;
-    }
-
-}
 #keyPress{
     color: beige;
     padding-left: 13%;
@@ -53,6 +21,10 @@ body{
     padding-bottom: 1.5%;
     font-size: 120%;
     font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+#chalkboard{
+    padding-left: 14%;
 }
 
 #wrongLetter{
@@ -74,18 +46,31 @@ body{
 }
 
 #playButton{
+    position: absolute;
+    margin-left: 51%;
+    margin-top: -1.05%;
+    padding: .45%;
     background-color: beige;
     font-family: "comic Sans MS", cursive, sans-serif;
 }
 
 #pauseButton{
-    
+    position: absolute;
+    margin-left: 58.3%;
+    margin-top: -1.05%;
+    padding: .45%;
     background-color: beige;
     font-family: "comic Sans MS", cursive, sans-serif;
 }
  
 #restartLink{
+    display: inline-block;
+    height: 42%;
     color: black;
+    position: absolute;
+    margin-left: 42%;
+    margin-top: -1%;
+    padding-bottom: 30px;
     background-color: beige;
     font-family: "comic Sans MS", cursive, sans-serif;
 }
@@ -100,7 +85,7 @@ body{
 .line1{
     position: absolute;
     margin-top: 5%; 
-    margin-left: 5%;
+    margin-left: 35%;
     color: beige;
     font-size: 200%;
     font-family: "comic Sans MS", cursive, sans-serif;
@@ -108,9 +93,9 @@ body{
 
 .line2{
     position: absolute;
-    margin-top: 15%;
-    margin-left: 5%;
+    margin-top: 10%;
+    margin-left: 24.5%;
     color: beige;
-    font-size: 100%;
+    font-size: 110%;
     font-family: "comic Sans MS", cursive, sans-serif;
 }

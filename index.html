@@ -17,62 +17,56 @@
 
     </head>
       <body>
-            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <a id="title" class="navbar-brand" href="index.html">Country Music Hangman</a>
-                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
-                    aria-expanded="false" aria-label="Toggle navigation"></button>
-                <div class="collapse navbar-collapse" id="collapsibleNavId">
-                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-                        <li class="nav-item active">
-                            <a id="restartLink" class="nav-link" href="index.html">Restart Game <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item active">
+            <nav class="navbar navbar-light bg-dark">
+                    <a id="title" class="navbar-brand" href="index.html">Country Music Hangman</a>
+                    <form class="form-inline">
+                        
                                 <audio id="myAudio">
-                                        <source src="assets/Music/02 Don't Take the Girl.m4a" type="audio/ogg">
-                                        <source src="assets/Music/02 Don't Take the Girl.m4a" type="audio/mpeg">
-                                        Your browser does not support the audio element.
+                                    <source src="assets/Music/02 Don't Take the Girl.m4a" type="audio/ogg">
+                                    <source src="assets/Music/02 Don't Take the Girl.m4a" type="audio/mpeg">
                                 </audio>
-                                      <button id="playButton" onclick="playAudio()" type="button">Play Music</button>
-                                      <button id="pauseButton" onclick="pauseAudio()" type="button">Pause Music</button> 
-                        </li>
-                    </ul>
-                </div>
-            </nav>
+                            <a href="index.html"><button id="pauseButton" class="btn btn-sm btn-outline-success" type="button">New Word</button></a>
+                            <button id="playButton" onclick="playAudio()" class="btn btn-sm btn-outline-success" type="button">Play Music</button>
+                            <button id="pauseButton" onclick="pauseAudio()" class="btn btn-sm btn-outline-success" type="button">Pause Music</button>
+                        
+                    </form>
+                  </nav>
+             
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-3">
+                    <div class="col-lg-4 col-md-0 col-sm-0">
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-9" id="keyPress">
+                    <div class="col-lg-8 col-md-12 col-sm-12" id="keyPress">
                             Press any key to begin.
                     </div>
                 </div>
             </div>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-2 col-md-2 col-sm-1">
+                    <div class="col-lg-2 col-md-0 col-sm-0">
                     </div>
-                    <div id="chalkboard" class="col-lg-10 col-md-10 col-sm-6">
+                    <div class="col-lg-10 col-md-12 col-sm-12">
                         <p class="line1">90's Country Songs</p>
                         <p class="line2">You have 7 guesses to get the song title right. Good luck!</p>
-                       <img src="assets/images/chalkboard.jpg" alt="chalkboard">
+                       <img id="chalkboard" src="assets/images/chalkboard.jpg" alt="chalkboard">
                         <div id="dashes"> 
                         </div>
                        </div>
                     </div>
                 <div class="container">
                     <div class="row">
-                        <div class="col-lg-6 col-md-6 col-sm-3">
+                        <div class="col-lg-4 col-md-0 col-sm-0">
                         </div>
-                        <div id="wrongLetter" class="col-lg-6 col-md-6 col-sm-9">
+                        <div id="wrongLetter" class="col-lg-8 col-md-12 col-sm-12">
                             WRONG LETTERS:
                         </div>
                     </div>
                 </div> 
                 <div class="container">
                         <div class="row">
-                            <div class="col-lg-5 col-md-5 col-sm-3">
+                            <div class="col-lg-3 col-md-0 col-sm-0">
                             </div>
-                            <div id="wLBox" class="col-lg-7 col-md-7 col-sm-9">
+                            <div id="wLBox" class="col-lg-8 col-md-12 col-sm-12">
                             </div>
                         </div>
                     </div>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- saved from url=(0032)http://127.0.0.1:5500/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Country Music Hangman</title>
+        <!-- Required meta tags -->
+        
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="./Country Music Hangman_files/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link rel="stylesheet" href="./Country Music Hangman_files/style.css">
+        <link rel="stylesheet" href="./Country Music Hangman_files/reset.css">
+        <!-- Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="./Country Music Hangman_files/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="./Country Music Hangman_files/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="./Country Music Hangman_files/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    </head>
+      <body>
+            <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+                <a id="title" class="navbar-brand" href="http://127.0.0.1:5500/index.html">Country Music Hangman</a>
+                <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation"></button>
+                <div class="collapse navbar-collapse" id="collapsibleNavId">
+                    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                        <li class="nav-item active">
+                            <a id="restartLink" class="nav-link" href="http://127.0.0.1:5500/index.html">Restart Game <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="nav-item active">
+                                <audio id="myAudio">
+                                        <source src="assets/Music/02 Don&#39;t Take the Girl.m4a" type="audio/ogg">
+                                        <source src="assets/Music/02 Don&#39;t Take the Girl.m4a" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                </audio>
+                                      <button class="col-lg-1" id="playButton" onclick="playAudio()" type="button">Play Music</button>
+                                      <button class="col-lg-1" id="pauseButton" onclick="pauseAudio()" type="button">Pause Music</button> 
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 col-md-6 col-sm-3">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-9" id="keyPress">
+                            Press any key to begin.
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-2 col-md-2 col-sm-1">
+                    </div>
+                    <div id="chalkboard" class="col-lg-10 col-md-10 col-sm-6">
+                        <p class="line1">90's Country Songs</p>
+                        <p class="line2">You have 7 guesses to get the song title right. Good luck!</p>
+                       <img src="./Country Music Hangman_files/chalkboard.jpg" alt="chalkboard">
+                        <div id="dashes"> 
+                        </div>
+                       </div>
+                    </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-3">
+                        </div>
+                        <div id="wrongLetter" class="col-lg-6 col-md-6 col-sm-9">
+                            WRONG LETTERS:
+                        </div>
+                    </div>
+                </div> 
+                <div class="container">
+                        <div class="row">
+                            <div class="col-lg-5 col-md-5 col-sm-3">
+                            </div>
+                            <div id="wLBox" class="col-lg-7 col-md-7 col-sm-9">
+                            </div>
+                        </div>
+                    </div>
+            </div> 
+            <script src="./Country Music Hangman_files/game.js"></script>     
+        <!-- Code injected by live-server -->
+<script type="text/javascript">
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+    
+</body></html>

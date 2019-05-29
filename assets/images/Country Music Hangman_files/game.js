@@ -14,7 +14,7 @@ var wrongLetter = [];
 
 //geting the myAudio ID to play music
 var music = document.getElementById("myAudio"); 
-
+                                      
 function playAudio() { 
   music.play(); 
 } 
