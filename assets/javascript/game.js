@@ -10,6 +10,17 @@ console.log(underScore);
 var rightLetter = [];
 var wrongLetter = [];
 // DOM Manipulation
+
+var x = document.getElementById("myAudio"); 
+                                      
+function playAudio() { 
+  x.play(); 
+} 
+
+function pauseAudio() { 
+  x.pause(); 
+} 
+
 var underScoreDOM;
 underScoreDOM = new Array(randSongs90s.length + 1).join("_");
 
@@ -50,21 +61,18 @@ document.addEventListener('keypress', (event) => {
            console.log(wrongLetter);
            //write the wrong letters guessed inside id "wLBox"
            document.getElementById("wLBox").innerHTML = wrongLetter;
-            for(var i = 0; i <wrongLetter.length; i++) {
-                console.log(wrongLetter.length[i]);
-                if(wrongLetter.length == 7) {
-                    alert("You Lose");
-                }
-                else if(wrongLetter.length == 6) {
-                    alert("Last guess make it count!");
-                }
-            }
-        
-       }  
+            }         
    }
-   //write the number of dashes to the id "dashes"
+   //get id from html to write the dashes to
    document.getElementById("dashes").innerHTML = underScoreDOM;
-
+   //for loop to count the length of the wrong letter array to alert when you lose
+   for(var i = 0; i < wrongLetter.length; i++) {
+    if(i == 7){
+        alert("You Lose");
+        //reveal the correct word
+        document.getElementById("dashes").innerHTML = randSongs90s;
+    }   
+    }
 });
 
 function checkWin()
@@ -74,8 +82,9 @@ function checkWin()
    if (iUnderScorePos == -1)
    {
        alert("You Win!");
-       //This clears the timer
+       //Used to clear the timer
        clearInterval(bContinue);
    }
+
 }
 

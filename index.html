@@ -18,16 +18,22 @@
     </head>
       <body>
             <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
-                <a class="navbar-brand" href="index.html">Country Music Hangman</a>
+                <a id="title" class="navbar-brand" href="index.html">Country Music Hangman</a>
                 <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId"
                     aria-expanded="false" aria-label="Toggle navigation"></button>
                 <div class="collapse navbar-collapse" id="collapsibleNavId">
                     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                         <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Restart Game <span class="sr-only">(current)</span></a>
+                            <a id="restartLink" class="nav-link" href="index.html">Restart Game <span class="sr-only">(current)</span></a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Sound Effects</a>
+                        <li class="nav-item active">
+                                <audio id="myAudio">
+                                        <source src="assets/Music/02 Don't Take the Girl.m4a" type="audio/ogg">
+                                        <source src="assets/Music/02 Don't Take the Girl.m4a" type="audio/mpeg">
+                                        Your browser does not support the audio element.
+                                </audio>
+                                      <button id="playButton" onclick="playAudio()" type="button">Play Music</button>
+                                      <button id="pauseButton" onclick="pauseAudio()" type="button">Pause Music</button> 
                         </li>
                     </ul>
                 </div>
@@ -46,6 +52,8 @@
                     <div class="col-lg-2 col-md-2 col-sm-1">
                     </div>
                     <div id="chalkboard" class="col-lg-10 col-md-10 col-sm-6">
+                        <p class="line1">90's Country Songs</p>
+                        <p class="line2">You have 7 guesses to get the song title right. Good luck!</p>
                        <img src="assets/images/chalkboard.jpg" alt="chalkboard">
                         <div id="dashes"> 
                         </div>

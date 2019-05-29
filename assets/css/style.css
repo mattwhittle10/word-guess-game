@@ -19,7 +19,8 @@ body{
     padding-left: 13%;
     padding-top: 1.5%;
     padding-bottom: 1.5%;
-    font-size: 120%
+    font-size: 120%;
+    font-family: "comic Sans MS", cursive, sans-serif;
 }
 
 #chalkboard{
@@ -28,17 +29,73 @@ body{
 
 #wrongLetter{
     color: beige;
-    padding-top: 1.5%;
+    padding-top: 1%;
     padding-left: 12%;
     font-size: 150%;
     text-decoration: underline;
     font-weight: bold;
+    font-family: "comic Sans MS", cursive, sans-serif;
 }
 
 #wLBox{
     border: 5px solid beige;
-    height: 100px;
-    font-size: 120%;
+    height: 60px;
+    font-size: 180%;
     color: beige;
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+#playButton{
+    position: absolute;
+    margin-left: 51%;
+    margin-top: -1.05%;
+    padding: .45%;
+    background-color: beige;
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+#pauseButton{
+    position: absolute;
+    margin-left: 58.3%;
+    margin-top: -1.05%;
+    padding: .45%;
+    background-color: beige;
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+ 
+#restartLink{
+    display: inline-block;
+    height: 42%;
+    color: black;
+    position: absolute;
+    margin-left: 42%;
+    margin-top: -1%;
+    padding-bottom: 30px;
+    background-color: beige;
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+#title{
+    color: beige;
+    font-size: 190%;
+    margin-left:5%;
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+.line1{
+    position: absolute;
+    margin-top: 5%; 
+    margin-left: 35%;
+    color: beige;
+    font-size: 200%;
+    font-family: "comic Sans MS", cursive, sans-serif;
+}
+
+.line2{
+    position: absolute;
+    margin-top: 10%;
+    margin-left: 24.5%;
+    color: beige;
+    font-size: 110%;
     font-family: "comic Sans MS", cursive, sans-serif;
 }
